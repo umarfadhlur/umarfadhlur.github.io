@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Umar Fadhlurrachman</title>
+   <link rel="stylesheet" href="assets/styles/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+   <header>
+      <div class="jumbotron">
+         <img src="assets/image/umar.png">
+      </div>
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="github.html">Git dan GitHub</a></li>
+            <li><a href="conflict.html">Conflict</a></li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div id="content">
+         <article id="conflict" class="card">
+            <h2>Conflict</h2>
+            <p>Apa itu Conflict?</p>
+            <p>Asumsikan Anda bekerjasama dengan saya pada suatu proyek. Suatu ketika, saya mengedit sebuah halaman yang sudah tercantum di GitHub dan demikian juga anda.
+                Kita sama-sama mengedit halaman yang sama dan anda sudah mem-push hasil pekerjaan anda duluan. Baru setelah itu saya selesai dan saya push.</p>
+            <p>Tiba-tiba saya kaget, "Wah, kok saya dapet pesan Conflict nih?"</p>
+            <img src="assets/image/conflict.svg">
+            <p>Ketika saya cek di repository GitHub, saya melihat anda baru saja push ke repository dan saya maklum apabila terjadi sebuah conflict. Karena sifat Git yang 
+                memiliki integritas, dia akan "memantau" secara keseluruhan kode yang berada di GitHub dan dibandingkan dengan kode yang hampir saya push. Ternyata kode kita 
+                sangatlah berbeda! Dari segi penulisan maupun algoritma yang digunakan.
+            </p>   
+         </article>
+
+         <article id="cause" class="card">
+            <h2>Penyebab Conflict</h2>
+            <img src="assets/image/errorconf.png">
+            <p>Penyebab conflict adalah adanya ketidaksesuaian data dari lokal dengan data yang ada pada server, data saling clash satu sama lain sehingga menyebabkan conflict.
+                Sebagai contoh, saya dan anda melakukan revisi pada baris yang sama dengan kode yang jauh berbeda. Maka Git yang mencoba untuk melakukan Auto Merging tidak berhasil
+                karena baris yang sama dimasukkan code yang berbeda sehingga menimbulkan conflict.
+            </p>
+        </article>
+
+        <article id="avoid" class="card">
+            <h2>Menghindari Conflict</h2>
+            <p>Untuk menghindari conflict, bisa melakukan git pull terlebih dahulu sebelum mengedit bagian yang lain. Namun cara ini kurang efektif karena pada akhirnya kita terkesan
+                harus menunggu sebelum kita bisa mulai mengedit bagian lain. Dan ini tidak mungkin dilakukan apabila pekerjaan kita diharuskan untuk kerja cepat.
+            </p>
+            <img src="assets/image/merge.png">
+            <p>Oleh sebab itu, kita bisa mengakali dengan membuat branch baru pada Git untuk menyimpan sementara kode masing-masing sebelum nanti digabungkan dengan cara git merge ke 
+                branch master.
+            </p>
+        </article>
+
+        <article id="happened" class="card">
+            <h2>Mengatasi Conflict</h2>
+            <p>Apabila sudah terlanjur menghadapi sebuah conflict git, maka yang harus kita lakukan adalah menyimpan kode sementara yang kita buat. Lalu lakukan git pull terlebih dahulu
+                sehingga kita akan mendapatkan kode yang paling terupdate. Barulah setelah itu kita edit dan tambahkan kode yang sudah kita buat sebelumnya. Lalu bisa kita push langsung
+                ke master ataupun kita push dulu ke branch baru. Push ke branch baru lebih disarankan untuk menghindari error lainnya. Setelah itu, barulah kita lakukan git merge ke branch
+                master.
+            </p>
+            <img src="assets/image/bugfix.png">
+        </article>
+
+      </div>
+      <aside>
+         <article class="profile card">
+            <header>
+               <h2>Umar Fadhlurrachman</h2>
+               <figure>
+                  <img src="assets/image/umarf.png">
+               </figure>
+            </header>
+            <section>
+               <h3>Informations</h3>
+               <table>
+                  <tr>
+                     <th width="55%">Phone</th>
+                     <td width="45%">+628112699912</td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Website</th>
+                     <td width="45%"><a href="https://blog.mooii.xyz">mooii.xyz</a></td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Location</th>
+                     <td width="45%">Purwokerto, Indonesia</td>
+                  </tr>
+               </table>
+            </section>
+            
+            <section>
+               <h3>Skills</h3>
+               <table>
+                  <tr>
+                     <th width="55%">PHP</th>
+                     <td width="45%">Advanced</td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Codeigniter</th>
+                     <td width="45%">Advanced</td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Flutter</th>
+                     <td width="45%">Intermediate</td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Java</th>
+                     <td width="45%">Intermediate</td>
+                  </tr>
+                  <tr>
+                     <th width="55%">Kotlin</th>
+                     <td width="45%">Basic</td>
+                  </tr>
+               </table>
+            </section>
+         </article>
+      </aside>
+
+   </main>
+   <footer>
+      <p>Built for Refactory's Talent Factory &#169;
+         <script>
+            document.write(new Date().getFullYear())
+         </script>, Umar Fadhlurrachman</p>
+   </footer>
+</body>
+
+</html>
